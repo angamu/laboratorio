@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+    width:50%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.btn-add {
+	background:#78b266;
+	color:#fff;
+	border: 1px solid;
+	padding: 10px;
+	text-decoration:none;
+}
