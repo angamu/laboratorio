@@ -14,3 +14,16 @@ table, th, td {
 	padding: 10px;
 	text-decoration:none;
 }
+
+.encabezado {
+    padding: 10px;
+    background: #78b266;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom:  10px;
+}
+
+.form-data {
+    padding: 10px;
+    border: 1px solid #ced4da;
+}

@@ -1,6 +1,9 @@
 package com.segurospac;
-
 import com.segurospac.DataBaseConn;
+
+/**
+ * Esta clase define el modelo de inmueble con todos sus atributos y funciones 
+ */
 
 public class Inmueble {
 		
@@ -49,6 +52,7 @@ public class Inmueble {
 		this.estrato = estrato;
 	}
 	
+	/** Constructor para inicializar los atributos del modelo */
 	public Inmueble(String propietario, String direccion, String tipo, Double valor, String metraje, Integer estrato) {
 		this.propietario = propietario;
 		this.direccion = direccion;
@@ -58,6 +62,7 @@ public class Inmueble {
 		this.estrato = estrato;
 	}
 	
+	/** funcion para insertar un inmueble en la base de datos */
 	public void insertarInmueble() {
 		String consultaSQL = "insert into inmueble (propietariof,direccion,tipo,valor,metraje,estrato) values ";
 		consultaSQL += "('" + this.propietario + "','" +  this.direccion + "','" + this.tipo + "','" + this.valor + "','" + this.metraje + "','" + this.estrato + "')";

@@ -2,9 +2,11 @@
 <%@page import="com.segurospac.Propietario"%>
 
 <% 
-	//instanciar objeto propietario para enviar datos a insertar en la db
+	/** recibir los parametros enviados por get desde el formulario formInsertarPropietario.jsp */
 	String cedula= request.getParameter("cedula");
 	String nombre= request.getParameter("nombre");
+	
+	/** instanciar objeto propietario para enviar datos a insertar en la db */
 	Propietario propietario= new Propietario(cedula,nombre);
 	propietario.insertar();
 	response.sendRedirect("ListarPropietarios.jsp");

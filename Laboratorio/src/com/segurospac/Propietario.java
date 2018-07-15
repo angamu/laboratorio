@@ -1,11 +1,13 @@
 package com.segurospac;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import com.segurospac.DataBaseConn;
 
-//
+/**
+ * Esta clase define el modelo de propietario con todos sus atributos y funciones 
+ */
+
 public class Propietario {
 	
 	private String cedula;
@@ -23,11 +25,14 @@ public class Propietario {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
+	/** Constructor para inicializar los atributos del modelo */
 	public Propietario(String cedula, String nombre) {
 		this.cedula = cedula;
 		this.nombre = nombre;
 	}
 	
+	/** funcion para insertar un propietario en la base de datos */
 	public void insertar() {
 		String consultaSQL = "insert into propietario (cedula,nombre) values ";
 		consultaSQL += "('" + this.cedula + "','" +  this.nombre + "')";
@@ -35,6 +40,7 @@ public class Propietario {
 		helper.modificarRegistro(consultaSQL);
 	}
 	
+	/** funcion para seleccionar todos los clientes de la base de datos */
 	public static ArrayList<Propietario> listarPropietarios() {
 		String consultaSQL = "select * from propietario";
 		DataBaseConn helper = new DataBaseConn();
